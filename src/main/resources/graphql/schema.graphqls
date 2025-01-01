@@ -1,0 +1,20 @@
+type Product{
+    id:ID,
+    name:String,
+    price:Float
+    catogery:String
+    stock:Int
+}
+
+type ProductUser{
+    id:ID,
+    name:String,
+    price:Float
+    catogery:String
+    stock:Int
+}
+
+type Query{
+    getProduct:[Product]
+    productFindByCatogery(catogery:String):[ProductUser]
+}
