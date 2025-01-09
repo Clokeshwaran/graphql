@@ -1,20 +1,24 @@
 type Product{
     id:ID,
-    name:String,
+    name:String
     price:Float
     catogery:String
     stock:Int
 }
 
 type ProductUser{
-    id:ID,
-    name:String,
-    price:Float
-    catogery:String
-    stock:Int
+    id:ID!,
+    name:String!
+    price:Float!
+    catogery:String!
+    stock:Int!
 }
 
 type Query{
     getProduct:[Product]
     productFindByCatogery(catogery:String):[ProductUser]
+}
+
+type Mutation{
+    getProduct: [Product]
 }
